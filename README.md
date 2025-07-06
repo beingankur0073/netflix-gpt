@@ -1,6 +1,9 @@
 # Neflix Gpt
 - Create React App
 - Configured Tailwind Css
+- Header
+- Login form
+- Signup Form
 
 
 
