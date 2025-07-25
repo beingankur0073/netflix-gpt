@@ -5,7 +5,7 @@ import { auth } from '../utils/firebase.js';
 import {  createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { useDispatch } from 'react-redux';
 import { addUser } from '../utils/userSlice.js';
-import { USER_AVATAR } from '../utils/constants.js';
+import { BG_URL, USER_AVATAR } from '../utils/constants.js';
 
 
 const Login = () => {
@@ -92,7 +92,7 @@ const Login = () => {
 
         <div className='absolute'>
             <img 
-            src='https://assets.nflxext.com/ffe/siteui/vlv3/8200f588-2e93-4c95-8eab-ebba17821657/web/IN-en-20250616-TRIFECTA-perspective_9cbc87b2-d9bb-4fa8-9f8f-a4fe8fc72545_small.jpg'
+            src={BG_URL}
             alt='logo'
             />
         </div>
