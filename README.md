@@ -37,6 +37,15 @@
 - Gpt Search Page
 - Gpt Search Bar
 - (BONUS) Multi-language Feture in our App
+- Get Perplexity api key
+- Gpt Search API Call
+- fetched gptMovieSuggestions from TMDB
+- created gptSlice added data
+- Reused Movie List Component to make movie suggestion container
+- Memoization
+- Added .env file
+- Adding .env file to gitignore
+- Made our Site responsive
 
 
 

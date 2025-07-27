@@ -8,7 +8,7 @@ export const API_OPTIONS={
   method: 'GET',
   headers: {
     accept: 'application/json',
-    Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJiNDcyMzM4ZTY3MmE5NTA0NGEyZjEwMTE4NDliN2E2NyIsIm5iZiI6MTc0MzAwMjE5NC40MDUsInN1YiI6IjY3ZTQxYTUyMGVlNTNkNGU3MWYwYzhiOSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.IB3m58q4a0YPAhsbF452ZzzrZtTzhrHOuCUnpdCtT-g'
+    Authorization: "Bearer "+process.env.REACT_APP_TMDB_KEY 
   }
 };
 
@@ -22,3 +22,29 @@ export const SUPPORTED_LANGUAGES=[
     {identifier:"hindi",name:"Hindi"},
     {identifier:"spanish",name:"Spanish"}
 ]
+
+export const PERPLEXITY_KEY=process.env.REACT_APP_PERPLEXITY_KEY 
+
+
+export const PERPLEXITY_URL = 'https://api.perplexity.ai/chat/completions';
+export const buildRequestBodyJSON = message => JSON.stringify({
+  search_mode: "web",
+  reasoning_effort: "low",
+  temperature: 0.2,
+  top_p: 0.9,
+  return_images: false,
+  return_related_questions: false,
+  top_k: 0,
+  stream: false,
+  presence_penalty: 0,
+  frequency_penalty: 0,
+  web_search_options: {
+    search_context_size: "low"
+  },
+  messages: [
+    { role: "user", content: message }
+  ],
+  model: "sonar"
+});
+
+
