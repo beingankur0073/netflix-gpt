@@ -21,7 +21,7 @@ const GptSearchBar = () => {
   const handleGptSearchClick = async () => {
   // Get user's search text
   const userInput = searchtext.current.value;
-  console.log(userInput);
+ 
 
   // Compose the prompt as per your requirements
   const getQuery = 
@@ -45,7 +45,7 @@ const GptSearchBar = () => {
       // TODO : Wtite Error Handling
     }
 
-    console.log(perplexityResult.choices?.[0].message?.content);
+ 
 
 
     // Andaz Apna Apna, Hera Pheri, Chup Chupke, Jaane Bhi Do Yaaro,Padosan
@@ -56,7 +56,7 @@ const GptSearchBar = () => {
     const promiseArray=getMovies.map((movie) => searchMovieTMDB(movie))
     // [Promise, Promise, Promise, Promise, Promise]
     const tmdbResults=await Promise.all(promiseArray);
-    console.log(tmdbResults);
+  
     dispatch(addGptMovieResult({movieNames:getMovies,movieResults:tmdbResults}))
 };
 

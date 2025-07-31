@@ -4,7 +4,7 @@ import useMovieTrailer from '../hooks/useMovieTrailer.js';
 
 const VideoBackgound = ({movieId}) => {
   const trailerVideo=useSelector((state) => state.movies?.trailerVideo);
-  console.log("https://www.youtube.com/embed/"+trailerVideo?.key+"?autoplay=1&mute=1")
+  
   useMovieTrailer(movieId);
   return (
      
