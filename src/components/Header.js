@@ -8,6 +8,7 @@ import { addUser, removeUser } from '../utils/userSlice.js';
 import { LOGO, SUPPORTED_LANGUAGES } from '../utils/constants.js';
 import { toggleGptSearchView } from '../utils/gptSlice.js';
 import { changeLanguage } from '../utils/configSlice.js';
+import img from "../utils/logo.png"
 
 const Header = () => {
   const navigate=useNavigate();
@@ -59,8 +60,8 @@ const handleLanguageChange=(e)=>{
   return (
     <div className='absolute px-8 py-2 w-screen bg-gradient-to-b from-black z-10 flex flex-col md:flex-row md:justify-between ' >
         <img 
-            className='w-44 mx-auto md:mx-0'
-            src={LOGO}
+            className='w-60 mx-auto md:mx-0'
+            src={img}
             alt="logo"
          />
 
